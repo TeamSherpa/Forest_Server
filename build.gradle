@@ -42,4 +42,5 @@ dependencies {
     compile group: 'org.mybatis', name: 'mybatis-spring'
     compile group: 'org.mybatis', name: 'mybatis'
     compile group: 'org.projectlombok', name: 'lombok', version: '1.16.20'
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
 }
