@@ -1,6 +1,7 @@
 package com.sherpa.main;
 
 import com.sherpa.mountain.parse.Mountain;
+import com.sherpa.mountain.parse.MountainImage;
 import com.sherpa.mountain.parse.MountainInfomationParse;
 import com.sherpa.v1.mountain.MountainServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,10 @@ public class MountainController {
 
     @RequestMapping("/insert/mountainInfo")
     public void insertMountainInfo() {
-        System.out.print(mountains.get(0));
-        mountainServiceImpl.add(mountains.get(0).toMountainDTO());
+        for (Mountain mountain: mountains) {
+            mountainServiceImpl.add(mountain.toMountainDTO());
+            //MountainImage mountainImage = MountainInfomationParse.shared.parse(mountain.getMntilistno());
+            //mountainServiceImpl.updateImage(mountainImage.toMountainImageDTO());
+        }
     }
 }

@@ -15,4 +15,8 @@ public class MountainServiceImpl implements MountainService {
     public void add(MountainDTO mountainDTO) {
         mountainMapper.add(mountainDTO);
     }
+
+    public void updateImage(MountainImageDTO mountainImageDTO) {
+        mountainMapper.updateImage(mountainImageDTO);
+    }
 }

@@ -3,8 +3,12 @@
 
 <mapper namespace="com.sherpa.mapper.MountainMapper">
 
-<insert id="add" parameterType="com.sherpa.v1.mountain.MountainDTO">
-    insert into mountains
-    values(#{code},#{name},#{height},#{address},#{management},#{detail},#{summary},#{imageURL},#{isFamous})
-</insert>
+    <insert id="add" parameterType="com.sherpa.v1.mountain.MountainDTO">
+      insert ignore into mountains
+      values(null, #{code},#{name},#{height},#{address},#{management},#{detail},#{summary},#{imageURL},#{isFamous})
+    </insert>
+
+    <update id="updateImage" parameterType="com.sherpa.v1.mountain.MountainImageDTO">
+      update mountains set mImageUrl=#{imageURL} where mcode=#{code}
+    </update>
 </mapper>
