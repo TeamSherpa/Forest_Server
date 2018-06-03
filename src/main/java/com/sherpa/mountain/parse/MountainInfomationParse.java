@@ -55,6 +55,7 @@ public class MountainInfomationParse {
         try {
             requestor.connect();
             String jsonData = requestor.getOutputStream();
+            System.out.print(jsonData);
             JsonObject jsonObject = new JsonParser().parse(jsonData).getAsJsonObject();
             JsonElement items = jsonObject.get("response").getAsJsonObject()
                     .get("body").getAsJsonObject()

@@ -13,8 +13,6 @@ public class NetworkRequestor {
     private String method;
     private URL url;
     private HttpURLConnection connection;
-    private OutputStream os;
-    private BufferedWriter bw;
 
     public NetworkRequestor(String requestUrl, String method) {
         this.requestUrl = requestUrl;

@@ -5,10 +5,10 @@ import lombok.Data;
 
 @Data
 public class MountainImage {
-    String code;
-    String imgfilename;
-    String imgname;
-    int imgno;
+    private String code;
+    private String imgfilename;
+    private String imgname;
+    private int imgno;
 
     public MountainImageDTO toMountainImageDTO() {
         return new MountainImageDTO(code, imgfilename);
