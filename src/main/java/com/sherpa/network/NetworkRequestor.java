@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.URL;
 import java.net.HttpURLConnection;
+import java.util.Map;
 
 public class NetworkRequestor {
 
@@ -20,13 +21,26 @@ public class NetworkRequestor {
     }
 
     public void connect() throws Exception {
+        setConnection();
+        connection.connect();
+    }
+
+    public void connect(Map<String, String> header) throws Exception {
+        setConnection();
+        for (String key: header.keySet()) {
+            connection.setRequestProperty(key, header.get(key));
+        }
+        connection.connect();
+    }
+
+    public void setConnection() throws Exception {
         url = new URL(requestUrl);
         connection = (HttpURLConnection) url.openConnection();
         connection.setDoOutput(true);
         connection.setRequestMethod(method);
         connection.setConnectTimeout(100000);
-        connection.connect();
     }
+
 
     public String getOutputStream() throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));

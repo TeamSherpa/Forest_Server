@@ -27,6 +27,7 @@ public class MountainController {
     @Autowired
     private MountainServiceImpl mountainServiceImpl;
 
+    // 처음만 사용
     @RequestMapping("/insert/mountainInfo")
     public void insertMountainInfo() {
         for (Mountain mountain: mountains) {

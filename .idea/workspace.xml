@@ -5,11 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sherpa/main/MountainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sherpa/main/MountainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sherpa/mountain/parse/MountainInfomationParse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sherpa/mountain/parse/MountainInfomationParse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sherpa/network/APIConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sherpa/network/APIConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sherpa/network/CustomError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sherpa/network/CustomError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sherpa/network/ResponseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sherpa/network/ResponseUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/FamousMountainDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/FamousMountainDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sherpa/network/NetworkRequestor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sherpa/network/NetworkRequestor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -31,12 +30,12 @@
       <file leaf-file-name="MountainServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="56" column="53" lean-forward="true" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
+            <state relative-caret-position="495">
+              <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#755#756#0" expanded="true" />
                 <element signature="e#802#803#0" expanded="true" />
-                <element signature="e#862#863#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,21 +44,8 @@
       <file leaf-file-name="MountainInfomationParse.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/mountain/parse/MountainInfomationParse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="129" column="40" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#780#790#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FamousMountain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/mountain/parse/FamousMountain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="328">
+              <caret line="35" column="34" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,29 +53,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ForestEducationDTO.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/ForestEducationDTO.java">
+      <file leaf-file-name="NewsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/main/NewsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+            <state relative-caret-position="357">
+              <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FamousMountainDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/FamousMountainDTO.java">
+      <file leaf-file-name="NewsServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/news/NewsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MountainService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+            <state relative-caret-position="187">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,8 +80,8 @@
       <file leaf-file-name="MountainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/main/MountainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="63" column="69" lean-forward="true" selection-start-line="63" selection-start-column="69" selection-end-line="63" selection-end-column="69" />
+            <state relative-caret-position="359">
+              <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,29 +89,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MountainDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainDTO.java">
+      <file leaf-file-name="APIConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/network/APIConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MountainImageDTO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainImageDTO.java">
+      <file leaf-file-name="NewsFetcher.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/news/NewsFetcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="476">
+              <caret line="28" column="54" lean-forward="true" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MountainImage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/mountain/parse/MountainImage.java">
+      <file leaf-file-name="NewsDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/news/NewsDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state relative-caret-position="153">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NetworkRequestor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/network/NetworkRequestor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/news/NewsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -147,8 +151,8 @@
         <option value="spring-beans.schema" />
         <option value="Tag Library Descriptor" />
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -606,7 +610,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/main/HelloController.java" />
         <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/network/APIConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/mountain/parse/MountainDTO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/mountain.tld" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/mountain.fxml" />
@@ -615,7 +618,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/main/MybatisManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/network/NetworkRequestor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/mountain/parse/MountainImage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/network/NetworkResponse.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
@@ -632,12 +634,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/network/ResponseUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/FamousMountainDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/network/CustomError.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainImageDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/ForestEducationDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/main/MountainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainImageDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/network/APIConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/mountain/parse/MountainInfomationParse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/ForestEducationDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/v1/news/NewsDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/v1/news/NewsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/network/CustomError.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/v1/news/NewsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/main/NewsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/network/NetworkRequestor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sherpa/v1/news/NewsFetcher.java" />
       </list>
     </option>
   </component>
@@ -750,7 +759,27 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sherpa" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest-secretary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Forest_Server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sherpa" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
               <item name="mountain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="forest-secretary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Forest_Server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sherpa" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="forest-secretary" type="b2602c69:ProjectViewProjectNode" />
@@ -806,6 +835,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/user/Desktop/Forest_Server/src/main/java/com/sherpa/v1/news/NewsServiceImpl.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -908,12 +938,12 @@
       <workItem from="1526968733139" duration="232000" />
       <workItem from="1526975115545" duration="18261000" />
       <workItem from="1527689261323" duration="7795000" />
-      <workItem from="1527704494279" duration="32597000" />
+      <workItem from="1527704494279" duration="36055000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63297000" />
+    <option name="totallyTimeSpent" value="66755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="1028" extended-state="6" />
@@ -937,11 +967,11 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30398324" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30398324" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.32914045" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32914045" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985591" visible="true" weight="0.2345238" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985591" visible="true" weight="0.2345238" />
       <window_info anchor="right" id="Bean Validation" order="10" />
       <window_info id="Web" order="6" sideWeight="0.50144094" side_tool="true" weight="0.1875" />
       <window_info anchor="right" id="Gradle" order="6" />
@@ -963,53 +993,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/mapper/MountainMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#862#863#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/mountain/parse/MountainInfomationParse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#780#790#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MountainMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/network/APIConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1249,44 +1232,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/network/NetworkRequestor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/network/ResponseUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="26" column="113" selection-start-line="26" selection-start-column="113" selection-end-line="26" selection-end-column="113" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/network/APIConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/network/CustomError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/main/MountainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="63" column="69" lean-forward="true" selection-start-line="63" selection-start-column="69" selection-end-line="63" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1320,28 +1269,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="56" column="53" lean-forward="true" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#862#863#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainImageDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1356,21 +1283,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/mountain/parse/MountainInfomationParse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/ForestEducationDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="129" column="40" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
+        <state relative-caret-position="170">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#780#790#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/ForestEducationDTO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/network/CustomError.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        <state relative-caret-position="238">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/mountain/MountainServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="58" column="1" lean-forward="true" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/network/APIConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/main/MountainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/mountain/parse/MountainInfomationParse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/main/NewsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/news/NewsDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/network/NetworkRequestor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/news/NewsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/news/NewsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sherpa/v1/news/NewsFetcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="54" lean-forward="true" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

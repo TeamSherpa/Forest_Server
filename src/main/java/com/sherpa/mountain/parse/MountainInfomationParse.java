@@ -17,13 +17,13 @@ public class MountainInfomationParse {
     }
 
     public List<Mountain> fetchMountainInfo() {
-        String url = "http://apis.data.go.kr/1400000/service/cultureInfoService/mntInfoOpenAPI?" +
+        String path = "http://apis.data.go.kr/1400000/service/cultureInfoService/mntInfoOpenAPI?" +
                      "ServiceKey=" + APIConfiguration.serviceKey +
                      "&_type=json&numOfRows=3368";
 
         String method = "GET";
 
-        NetworkRequestor requestor = new NetworkRequestor(url, method);
+        NetworkRequestor requestor = new NetworkRequestor(path, method);
         List<Mountain> mountains = new ArrayList<Mountain>();
         try {
             requestor.connect();
@@ -45,14 +45,14 @@ public class MountainInfomationParse {
     }
 
     public MountainImage fetchMountainImage(String code) {
-        String url = "http://apis.data.go.kr/1400000/service/cultureInfoService/mntInfoImgOpenAPI?" +
+        String path = "http://apis.data.go.kr/1400000/service/cultureInfoService/mntInfoImgOpenAPI?" +
                 "ServiceKey=" + APIConfiguration.serviceKey +
                 "&_type=json&mntiListNo=" + code
                 +"&numOfRows=1";
 
         String method = "GET";
 
-        NetworkRequestor requestor = new NetworkRequestor(url, method);
+        NetworkRequestor requestor = new NetworkRequestor(path, method);
         try {
             requestor.connect();
             String jsonData = requestor.getOutputStream();
@@ -80,14 +80,14 @@ public class MountainInfomationParse {
     }
 
     public List<FamousMountain> fetchFamousMountainInfo() {
-        String url = "http://openapi.forest.go.kr/openapi/service/cultureInfoService/gdTrailInfoOpenAPI?" +
+        String path = "http://openapi.forest.go.kr/openapi/service/cultureInfoService/gdTrailInfoOpenAPI?" +
                 "ServiceKey=" + APIConfiguration.serviceKey +
                 "&_type=json" +
                 "&numOfRows=3000";
 
         String method = "GET";
 
-        NetworkRequestor requestor = new NetworkRequestor(url, method);
+        NetworkRequestor requestor = new NetworkRequestor(path, method);
         List<FamousMountain> mountains = new ArrayList<FamousMountain>();
         try {
             requestor.connect();
@@ -109,13 +109,13 @@ public class MountainInfomationParse {
     }
 
     public List<ForestEducationDTO> fetchEducationInfo(int pageNo) throws Exception {
-        String url = "http://openapi.forest.go.kr/openapi/service/cultureInfoService/frstEduInfoOpenAPI?" +
+        String path = "http://openapi.forest.go.kr/openapi/service/cultureInfoService/frstEduInfoOpenAPI?" +
                 "ServiceKey=" + APIConfiguration.serviceKey +
                 "&_type=json&eduType=4" +
                 "&pageNo=" + pageNo;
 
         String method = "GET";
-        NetworkRequestor requestor = new NetworkRequestor(url, method);
+        NetworkRequestor requestor = new NetworkRequestor(path, method);
         List<ForestEducationDTO> forestEducationDTOs = new ArrayList<>();
         requestor.connect();
         String jsonData = requestor.getOutputStream();
