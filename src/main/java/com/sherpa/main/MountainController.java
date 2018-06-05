@@ -21,8 +21,8 @@ import java.util.Map;
 @RestController
 public class MountainController {
 
-    List<Mountain> mountains = MountainInfomationParse.shared.parse();
-    List<FamousMountain> famousMountains = MountainInfomationParse.shared.famousParse();
+    List<Mountain> mountains = MountainInfomationParse.shared.fetchMountainInfo();
+    List<FamousMountain> famousMountains = MountainInfomationParse.shared.fetchFamousMountainInfo();
 
     @Autowired
     private MountainServiceImpl mountainServiceImpl;
@@ -31,7 +31,7 @@ public class MountainController {
     public void insertMountainInfo() {
         for (Mountain mountain: mountains) {
             mountainServiceImpl.add(mountain.toMountainDTO());
-            MountainImage mountainImage = MountainInfomationParse.shared.parse(mountain.getMntilistno());
+            MountainImage mountainImage = MountainInfomationParse.shared.fetchMountainImage(mountain.getMntilistno());
             mountainServiceImpl.updateImage(mountainImage.toMountainImageDTO());
         }
 
@@ -55,6 +55,15 @@ public class MountainController {
             return ResponseUtil.success(mountainServiceImpl.getFamousMountains());
         } catch (Exception e) {
             return ResponseUtil.exceptionError(CustomError.NO_TRAILS.code, CustomError.NO_TRAILS.message);
+        }
+    }
+
+    @RequestMapping("/getEducationProgram/pageNo={num}")
+    public Map<String, Object> getEducationInfomation(@PathVariable("num") int pageNo) {
+        try {
+            return ResponseUtil.success(mountainServiceImpl.getEducationInfo(pageNo));
+        } catch (Exception e) {
+            return ResponseUtil.exceptionError(CustomError.No_EDUCATION.code, CustomError.No_EDUCATION.message);
         }
     }
 }

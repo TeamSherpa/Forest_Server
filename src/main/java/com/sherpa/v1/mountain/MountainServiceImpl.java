@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.sherpa.mapper.MountainMapper;
+import com.sherpa.mountain.parse.MountainInfomationParse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Service
@@ -49,5 +51,9 @@ public class MountainServiceImpl implements MountainService {
     @Override
     public List<MountainDTO> getFamousMountains() throws Exception {
         return mountainMapper.getFamousMountains();
+    }
+
+    public List<ForestEducationDTO> getEducationInfo(int pageNo) throws Exception {
+        return MountainInfomationParse.shared.fetchEducationInfo(pageNo);
     }
 }

@@ -25,7 +25,6 @@ public class ResponseUtil {
         Gson gson = gsonBuilder();
         Map<String, Object> map;
         map = (Map<String, Object>) gson.fromJson(jsonObject, new TypeToken<Map <String, Object>>(){}.getType());
-
         return map;
     }
 
