@@ -47,7 +47,7 @@ public class MountainServiceImpl implements MountainService {
     }
 
     @Override
-    public List<MountainDTO> getFamousMountains() {
+    public List<MountainDTO> getFamousMountains() throws Exception {
         return mountainMapper.getFamousMountains();
     }
 }

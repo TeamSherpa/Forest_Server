@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -42,14 +43,18 @@ public class MountainController {
     @RequestMapping("/getTrailInfo/{code}")
     public Map<String, Object> getTrailInfo(@PathVariable("code") String code) {
         try {
-            return mountainServiceImpl.getTrailInfo(code);
+            return ResponseUtil.success(mountainServiceImpl.getTrailInfo(code));
         } catch (Exception e) {
             return ResponseUtil.exceptionError(CustomError.NO_TRAILS.code, CustomError.NO_TRAILS.message);
         }
     }
 
     @RequestMapping("/getFamousMountains")
-    public List<MountainDTO> getFamousMountains() {
-        return mountainServiceImpl.getFamousMountains();
+    public Map<String, Object> getFamousMountains() {
+        try {
+            return ResponseUtil.success(mountainServiceImpl.getFamousMountains());
+        } catch (Exception e) {
+            return ResponseUtil.exceptionError(CustomError.NO_TRAILS.code, CustomError.NO_TRAILS.message);
+        }
     }
 }

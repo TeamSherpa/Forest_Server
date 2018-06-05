@@ -13,5 +13,5 @@ public interface MountainService {
     void updateImage(MountainImageDTO mountainImageDTO);
     HashMap<String, Object> getTrailInfo(String code) throws Exception;
     void updateFamous(FamousMountainDTO famousMountainDTO);
-    List<MountainDTO> getFamousMountains();
+    List<MountainDTO> getFamousMountains() throws Exception;
 }
