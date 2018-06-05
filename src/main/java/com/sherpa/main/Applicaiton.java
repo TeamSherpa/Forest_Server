@@ -25,7 +25,7 @@ public class Applicaiton {
     }
 
     @Bean
-    public SqlSessionFactory sqlSessionFactory(DataSource dataSource)throws Exception {
+    public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
         SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
         Resource[] res = new PathMatchingResourcePatternResolver().getResources("classpath:mapper/*Mapper.xml");

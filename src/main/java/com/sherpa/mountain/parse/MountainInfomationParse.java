@@ -77,4 +77,33 @@ public class MountainInfomationParse {
         }
         return new MountainImage();
     }
+
+    public List<FamousMountain> famousParse() {
+        String url = "http://openapi.forest.go.kr/openapi/service/cultureInfoService/gdTrailInfoOpenAPI?" +
+                "ServiceKey=" + APIConfiguration.serviceKey +
+                "&_type=json" +
+                "&numOfRows=3000";
+
+        String method = "GET";
+
+        NetworkRequestor requestor = new NetworkRequestor(url, method);
+        List<FamousMountain> mountains = new ArrayList<FamousMountain>();
+        try {
+            requestor.connect();
+            String jsonData = requestor.getOutputStream();
+            JsonObject jsonObject = new JsonParser().parse(jsonData).getAsJsonObject();
+            JsonArray jsonElements = jsonObject.get("response").getAsJsonObject()
+                    .get("body").getAsJsonObject()
+                    .get("items").getAsJsonObject()
+                    .get("item").getAsJsonArray();
+            Gson gson = new Gson();
+            for (JsonElement element: jsonElements) {
+                FamousMountain mountain = gson.fromJson(element, FamousMountain.class);
+                mountains.add(mountain);
+            };
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return mountains;
+    }
 }

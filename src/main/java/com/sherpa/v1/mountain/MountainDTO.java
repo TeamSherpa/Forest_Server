@@ -6,15 +6,15 @@ import lombok.Data;
 public class MountainDTO {
     private String code;
     private String name;
-    private String height;
+    private Integer height;
     private String address;
     private String management;
     private String detail;
     private String summary;
     private String imageURL;
-    private int isFamous;
+    private Integer isFamous;
 
-    public MountainDTO(String code, String name, String height, String address, String management, String detail, String summary, String imageURL, int isFamous) {
+    public MountainDTO(String code, String name, Integer height, String address, String management, String detail, String summary, String imageURL, Integer isFamous) {
         this.code = code;
         this.name = name;
         this.height = height;

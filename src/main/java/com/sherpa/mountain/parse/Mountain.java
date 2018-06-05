@@ -17,6 +17,9 @@ public class Mountain {
     private String mntitop;
 
     public MountainDTO toMountainDTO() {
-        return new MountainDTO(mntilistno, mntiname, mntihigh, mntiadd, mntiadmin, mntidetails, mntisummary, null, 1);
+        if (mntihigh.equals(" ")) {
+            mntihigh = "0";
+        }
+        return new MountainDTO(mntilistno, mntiname, Integer.parseInt(mntihigh), mntiadd, mntiadmin, mntidetails, mntisummary, null, 1);
     }
 }
