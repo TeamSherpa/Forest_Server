@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98c9d23b-fd9a-4328-a97d-aef753fb0b5b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -62,20 +62,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+            <state relative-caret-position="85">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
+            <state relative-caret-position="236">
+              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -636,8 +636,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/main/NewsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/network/NetworkRequestor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sherpa/v1/news/NewsFetcher.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/build.gradle" />
       </list>
     </option>
   </component>
@@ -838,7 +838,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68822000" />
+    <option name="totallyTimeSpent" value="69720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="1028" extended-state="6" />
@@ -862,11 +862,11 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30398324" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30398324" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.32914045" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32914045" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985591" visible="true" weight="0.2345238" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985591" visible="true" weight="0.2345238" />
       <window_info anchor="right" id="Bean Validation" order="10" />
       <window_info id="Web" order="6" sideWeight="0.50144094" side_tool="true" weight="0.1875" />
       <window_info anchor="right" id="Gradle" order="6" />
@@ -1298,17 +1298,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        <state relative-caret-position="236">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1318,7 +1318,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>forest_0.0.1</last-edited>
+          <last-edited>forest_0.0.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
