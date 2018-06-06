@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.FileReader;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,11 +36,9 @@ public class MountainServiceImpl implements MountainService {
 
     @Override
     public HashMap<String, Object> getTrailInfo(String code) throws Exception {
-        String test = MountainServiceImpl.class.getResource("").getPath();
-        System.out.println(test);
-        String path = "resources/trails/" + code + ".json";
-        ClassLoader classLoader = MountainServiceImpl.class.getClassLoader();
-        JsonObject object = (JsonObject) new JsonParser().parse(new FileReader(classLoader.getResource(path).getFile()));
+        System.out.print(MountainServiceImpl.class.getResource("").getPath());
+        String path = MountainServiceImpl.class.getResource("").getPath() + "trails/" + code + ".json";
+        JsonObject object = (JsonObject) new JsonParser().parse(new FileReader(path));
         HashMap<String, Object> map = new HashMap<String,Object>();
         map = (HashMap<String,Object>) new Gson().fromJson(object, map.getClass());
         return map;
