@@ -46,6 +46,7 @@ public class MountainController {
         try {
             return ResponseUtil.success(mountainServiceImpl.getTrailInfo(code));
         } catch (Exception e) {
+            e.printStackTrace();
             return ResponseUtil.exceptionError(CustomError.NO_TRAILS.code, CustomError.NO_TRAILS.message);
         }
     }
