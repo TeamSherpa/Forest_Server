@@ -36,10 +36,8 @@ public class MountainServiceImpl implements MountainService {
     @Override
     public HashMap<String, Object> getTrailInfo(String code) throws Exception {
         String path = "trails/" + code + ".json";
-        System.out.println(path);
-        ClassLoader classLoader = new MountainServiceImpl().getClass().getClassLoader();
+        ClassLoader classLoader = MountainServiceImpl.class.getClassLoader();
         JsonObject object = (JsonObject) new JsonParser().parse(new FileReader(classLoader.getResource(path).getFile()));
-        System.out.println(object);
         HashMap<String, Object> map = new HashMap<String,Object>();
         map = (HashMap<String,Object>) new Gson().fromJson(object, map.getClass());
         return map;
