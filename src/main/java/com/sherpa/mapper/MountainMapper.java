@@ -4,7 +4,6 @@ import com.sherpa.v1.mountain.FamousMountainDTO;
 import com.sherpa.v1.mountain.MountainDTO;
 import com.sherpa.v1.mountain.MountainImageDTO;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.ResultMap;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

@@ -1,18 +1,15 @@
 package com.sherpa.main;
 
-import com.google.gson.JsonObject;
 import com.sherpa.mountain.parse.FamousMountain;
 import com.sherpa.mountain.parse.Mountain;
 import com.sherpa.mountain.parse.MountainImage;
 import com.sherpa.mountain.parse.MountainInfomationParse;
 import com.sherpa.network.CustomError;
 import com.sherpa.network.ResponseUtil;
-import com.sherpa.v1.mountain.MountainDTO;
 import com.sherpa.v1.mountain.MountainServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
