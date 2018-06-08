@@ -4,9 +4,7 @@ import com.sherpa.network.CustomError;
 import com.sherpa.network.ResponseUtil;
 import com.sherpa.v1.news.NewsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -16,8 +14,8 @@ public class NewsController {
     @Autowired
     private NewsServiceImpl newsServiceImpl;
 
-    @RequestMapping("/getNews/searchText={text}")
-    public Map<String, Object> getEducationInfomation(@PathVariable("text") String searchText) {
+    @RequestMapping(value = "/getNews", method = RequestMethod.GET)
+    public @ResponseBody Map<String, Object> getEducationInfomation(@RequestParam("searchText") String searchText) {
         try {
             return ResponseUtil.success(newsServiceImpl.getNews(searchText));
         } catch (Exception e) {

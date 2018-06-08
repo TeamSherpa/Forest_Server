@@ -36,8 +36,8 @@ public class MountainServiceImpl implements MountainService {
 
     @Override
     public HashMap<String, Object> getTrailInfo(String code) throws Exception {
-        System.out.print(MountainServiceImpl.class.getResource("").getPath());
-        String path = MountainServiceImpl.class.getResource("").getPath() + "trails/" + code + ".json";
+        // 홈에 담겨있다고 생각
+        String path = "/home/ec2-user/forest_server/Forest_Server/trails/" + code + ".json";
         JsonObject object = (JsonObject) new JsonParser().parse(new FileReader(path));
         HashMap<String, Object> map = new HashMap<String,Object>();
         map = (HashMap<String,Object>) new Gson().fromJson(object, map.getClass());
@@ -56,5 +56,10 @@ public class MountainServiceImpl implements MountainService {
 
     public List<ForestEducationDTO> getEducationInfo(int pageNo) throws Exception {
         return MountainInfomationParse.shared.fetchEducationInfo(pageNo);
+    }
+
+    @Override
+    public List<MountainDTO> getAroundMountains(String city) throws Exception {
+        return mountainMapper.getAroundMountains(city);
     }
 }

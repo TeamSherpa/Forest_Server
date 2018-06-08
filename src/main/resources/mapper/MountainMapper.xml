@@ -31,4 +31,8 @@
     <select id="getFamousMountains" resultMap="mountain">
         select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where is_Famous = 0
     </select>
+
+    <select id="getAroundMountains" parameterType="String" resultMap="mountain">
+        select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where maddress like concat(#{city},'%')
+    </select>
 </mapper>

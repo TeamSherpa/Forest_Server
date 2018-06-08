@@ -10,9 +10,7 @@ import com.sherpa.network.ResponseUtil;
 import com.sherpa.v1.mountain.MountainDTO;
 import com.sherpa.v1.mountain.MountainServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -41,8 +39,8 @@ public class MountainController {
         }
     }
 
-    @RequestMapping("/getTrailInfo/{code}")
-    public Map<String, Object> getTrailInfo(@PathVariable("code") String code) {
+    @RequestMapping(value = "/getTrailInfo", method = RequestMethod.GET)
+    public @ResponseBody Map<String, Object> getTrailInfo(@RequestParam("code") String code) {
         try {
             return ResponseUtil.success(mountainServiceImpl.getTrailInfo(code));
         } catch (Exception e) {
@@ -60,12 +58,21 @@ public class MountainController {
         }
     }
 
-    @RequestMapping("/getEducationProgram/pageNo={num}")
-    public Map<String, Object> getEducationInfomation(@PathVariable("num") int pageNo) {
+    @RequestMapping(value = "/getEducationProgram", method = RequestMethod.GET)
+    public @ResponseBody Map<String, Object> getEducationInfomation(@RequestParam("pageNo") int pageNo) {
         try {
             return ResponseUtil.success(mountainServiceImpl.getEducationInfo(pageNo));
         } catch (Exception e) {
             return ResponseUtil.exceptionError(CustomError.No_EDUCATION.code, CustomError.No_EDUCATION.message);
+        }
+    }
+
+    @RequestMapping(value = "/getAroundMountain", method = RequestMethod.GET)
+    public @ResponseBody Map<String, Object> getAroundMountains(@RequestParam("city") String city) {
+        try {
+            return ResponseUtil.success(mountainServiceImpl.getAroundMountains(city));
+        } catch (Exception e) {
+            return ResponseUtil.exceptionError(CustomError.NO_AROUND_MOUNTAINS.code, CustomError.NO_AROUND_MOUNTAINS.message);
         }
     }
 }

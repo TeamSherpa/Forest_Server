@@ -13,4 +13,5 @@ public interface MountainService {
     void updateFamous(FamousMountainDTO famousMountainDTO);
     List<MountainDTO> getFamousMountains() throws Exception;
     List<ForestEducationDTO> getEducationInfo(int pageNo) throws Exception;
+    List<MountainDTO> getAroundMountains(String city) throws Exception;
 }
