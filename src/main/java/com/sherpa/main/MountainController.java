@@ -63,16 +63,27 @@ public class MountainController {
         } catch (PageException e) {
             return ResponseUtil.exceptionError(CustomError.PAGE_UPPER_THAN_ZERO.code, CustomError.PAGE_UPPER_THAN_ZERO.message);
         } catch (Exception e) {
-            return ResponseUtil.exceptionError(CustomError.No_EDUCATION.code, CustomError.No_EDUCATION.message);
+            return ResponseUtil.exceptionError(CustomError.NO_EDUCATION.code, CustomError.NO_EDUCATION.message);
         }
     }
 
-    @RequestMapping(value = "/getAroundMountain", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAroundMountains", method = RequestMethod.GET)
     public @ResponseBody Map<String, Object> getAroundMountains(@RequestParam("city") String city) {
         try {
             return ResponseUtil.success(mountainServiceImpl.getAroundMountains(city));
         } catch (Exception e) {
             return ResponseUtil.exceptionError(CustomError.NO_AROUND_MOUNTAINS.code, CustomError.NO_AROUND_MOUNTAINS.message);
+        }
+    }
+
+    @RequestMapping(value = "/getEasyMountains", method = RequestMethod.GET)
+    public @ResponseBody Map<String, Object> getEasyMountains(@RequestParam("pageNo") int pageNo) {
+        try {
+            return ResponseUtil.success(mountainServiceImpl.getEasyMountains(pageNo));
+        } catch (PageException e) {
+            return ResponseUtil.exceptionError(CustomError.PAGE_UPPER_THAN_ZERO.code, CustomError.PAGE_UPPER_THAN_ZERO.message);
+        } catch (Exception e) {
+            return ResponseUtil.exceptionError(CustomError.NO_EASY_MOUNTAINS.code, CustomError.NO_EASY_MOUNTAINS.message);
         }
     }
 }

@@ -16,4 +16,5 @@ public interface MountainMapper {
     void updateFamous(FamousMountainDTO famousMountainDTO);
     List<MountainDTO> getFamousMountains(int pageNo);
     List<MountainDTO> getAroundMountains(String city);
+    List<MountainDTO> getEasyMountains(int pageNo);
 }
