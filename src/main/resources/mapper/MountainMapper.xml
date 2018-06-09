@@ -28,8 +28,9 @@
       update mountains set is_famous=0 where mcode=#{code}
     </update>
 
-    <select id="getFamousMountains" resultMap="mountain">
-        select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where is_Famous = 0
+    <select id="getFamousMountains" parameterType="Integer" resultMap="mountain">
+        select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where is_Famous = 0 and mImageUrl is not null
+        limit #{size}, 10
     </select>
 
     <select id="getAroundMountains" parameterType="String" resultMap="mountain">

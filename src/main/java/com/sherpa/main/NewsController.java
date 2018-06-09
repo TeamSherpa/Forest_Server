@@ -1,6 +1,6 @@
 package com.sherpa.main;
 
-import com.sherpa.network.CustomError;
+import com.sherpa.exception.CustomError;
 import com.sherpa.network.ResponseUtil;
 import com.sherpa.v1.news.NewsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
