@@ -30,7 +30,6 @@ public class MountainServiceImpl implements MountainService {
 
     @Override
     public HashMap<String, Object> getTrailInfo(String code) throws Exception {
-        // 홈에 담겨있다고 생각
         String path = "/home/ec2-user/forest_server/Forest_Server/trails/" + code + ".json";
         JsonObject object = (JsonObject) new JsonParser().parse(new FileReader(path));
         HashMap<String, Object> map = new HashMap<String,Object>();
