@@ -41,4 +41,12 @@
         select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where mheight between 1 and 300
         and mImageUrl is not null limit #{size}, 10
     </select>
+
+    <select id="getMountainCode" parameterType="String" resultType="String">
+        select mcode from mountains where mname = #{name}
+    </select>
+
+    <select id="getCity" parameterType="String" resultType="String">
+        select maddress from mountains where mname = #{name}
+    </select>
 </mapper>

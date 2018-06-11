@@ -48,7 +48,7 @@ public class MountainServiceImpl implements MountainService {
         if (pageNo == 0) {
             throw CustomError.PAGE_UPPER_THAN_ZERO.exception();
         }
-        int size = pageNo * 10;
+        int size = (pageNo - 1) * 10;
         return mountainMapper.getFamousMountains(size);
     }
 
@@ -69,7 +69,21 @@ public class MountainServiceImpl implements MountainService {
         if (pageNo == 0) {
             throw CustomError.PAGE_UPPER_THAN_ZERO.exception();
         }
-        int size = pageNo * 10;
+        int size = (pageNo - 1) * 10;
         return mountainMapper.getEasyMountains(size);
+    }
+
+    public String getMountainCode(String name) throws Exception {
+        if (name.isEmpty()) {
+            throw new Exception();
+        }
+        return mountainMapper.getMountainCode(name);
+    }
+
+    public String getCity(String name) throws Exception {
+        if (name.isEmpty()) {
+            throw new Exception();
+        }
+        return mountainMapper.getCity(name);
     }
 }
