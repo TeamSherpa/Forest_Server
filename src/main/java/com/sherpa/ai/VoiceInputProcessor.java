@@ -82,7 +82,7 @@ public class VoiceInputProcessor {
                 return service.getTrailInfo(code);
             } else if (pharse.contains("유명") || pharse.contains("명산") || pharse.contains("유명한")) {
                 return service.getFamousMountains(1);
-            } else if (pharse.contains("가을")) {
+            } else if (pharse.contains("가을") || pharse.contains("단풍")) {
                 return service.getAutumnMountains(1);
             } else if (pharse.contains("아이")) {
                 return service.getMountainsWithBaby(1);
