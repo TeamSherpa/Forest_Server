@@ -75,13 +75,23 @@ public class VoiceInputProcessor {
 
     private Object subdivideMountainCategory(MountainServiceImpl service) throws Exception {
         for (String pharse: phrasePool) {
-            if (pharse.contains("쉬운") || pharse.contains("편한")) {
+            if (pharse.contains("쉬운") || pharse.contains("편한") || pharse.contains("낮은")) {
                 return service.getEasyMountains(1);
             } else if (pharse.contains("등산로")) {
                 String code = service.getMountainCode(mountainName);
                 return service.getTrailInfo(code);
             } else if (pharse.contains("유명") || pharse.contains("명산") || pharse.contains("유명한")) {
                 return service.getFamousMountains(1);
+            } else if (pharse.contains("가을")) {
+                return service.getAutumnMountains(1);
+            } else if (pharse.contains("아이")) {
+                return service.getMountainsWithBaby(1);
+            } else if (pharse.contains("계곡")) {
+                return service.getVallyMountains(1);
+            } else if (pharse.contains("인기")) {
+                return service.getPopularMountains(1);
+            } else if (pharse.contains("어려운 산") || pharse.contains("높은 산")) {
+                return service.getDifficultMountains(1);
             }
         }
         throw new Exception();
