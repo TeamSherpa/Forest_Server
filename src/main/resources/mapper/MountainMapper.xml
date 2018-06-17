@@ -34,7 +34,7 @@
     </select>
 
     <select id="getAroundMountains" parameterType="String" resultMap="mountain">
-        select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where maddress like concat(#{city},'%')
+        select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where maddress like concat(#{city},'%') and mImageUrl is not null
     </select>
 
     <select id="getEasyMountains" parameterType="Integer" resultMap="mountain">
