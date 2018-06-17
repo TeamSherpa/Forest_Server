@@ -12,8 +12,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.StringHttpMessageConverter;
 
 import javax.sql.DataSource;
+import java.nio.charset.Charset;
 
 @SpringBootApplication
 @ComponentScan("com.sherpa")
@@ -31,5 +34,10 @@ public class Applicaiton {
         Resource[] res = new PathMatchingResourcePatternResolver().getResources("classpath:mapper/*Mapper.xml");
         sessionFactory.setMapperLocations(res);
         return sessionFactory.getObject();
+    }
+
+    @Bean
+    public HttpMessageConverter<String> responseBodyConverter() {
+        return new StringHttpMessageConverter(Charset.forName("UTF-8"));
     }
 }
