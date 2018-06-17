@@ -4,6 +4,7 @@ import com.sherpa.v1.mountain.FamousMountainDTO;
 import com.sherpa.v1.mountain.MountainDTO;
 import com.sherpa.v1.mountain.MountainImageDTO;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public interface MountainMapper {
     void updateImage(MountainImageDTO mountainImageDTO);
     void updateFamous(FamousMountainDTO famousMountainDTO);
     List<MountainDTO> getFamousMountains(int pageNo);
-    List<MountainDTO> getAroundMountains(String city);
+    List<MountainDTO> getAroundMountains(@Param("city") String city, @Param("pageNo") int pageNo);
     List<MountainDTO> getEasyMountains(int pageNo);
     String getMountainCode(String name);
     String getCity(String name);

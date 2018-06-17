@@ -33,8 +33,8 @@
         limit #{size}, 10
     </select>
 
-    <select id="getAroundMountains" parameterType="String" resultMap="mountain">
-        select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where maddress like concat(#{city},'%') and mImageUrl is not null
+    <select id="getAroundMountains" resultMap="mountain">
+        select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where maddress like concat(#{city},'%') and mImageUrl is not null limit #{pageNo}, 10
     </select>
 
     <select id="getEasyMountains" parameterType="Integer" resultMap="mountain">

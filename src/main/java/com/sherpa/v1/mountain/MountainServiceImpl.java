@@ -60,8 +60,12 @@ public class MountainServiceImpl implements MountainService {
     }
 
     @Override
-    public List<MountainDTO> getAroundMountains(String city) throws Exception {
-        return mountainMapper.getAroundMountains(city);
+    public List<MountainDTO> getAroundMountains(String city, int pageNo) throws Exception {
+        if (pageNo == 0) {
+            throw CustomError.PAGE_UPPER_THAN_ZERO.exception();
+        }
+        int size = (pageNo - 1) * 10;
+        return mountainMapper.getAroundMountains(city, size);
     }
 
     @Override

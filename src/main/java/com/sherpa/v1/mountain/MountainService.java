@@ -13,7 +13,7 @@ public interface MountainService {
     void updateFamous(FamousMountainDTO famousMountainDTO);
     List<MountainDTO> getFamousMountains(int size) throws Exception;
     List<ForestEducationDTO> getEducationInfo(int pageNo) throws Exception;
-    List<MountainDTO> getAroundMountains(String city) throws Exception;
+    List<MountainDTO> getAroundMountains(String city, int pageNo) throws Exception;
     List<MountainDTO> getEasyMountains(int size) throws Exception;
     String getMountainCode(String name) throws Exception;
     String getCity(String name) throws Exception;

@@ -68,9 +68,9 @@ public class MountainController {
     }
 
     @RequestMapping(value = "/getAroundMountains", method = RequestMethod.GET)
-    public @ResponseBody Map<String, Object> getAroundMountains(@RequestParam("city") String city) {
+    public @ResponseBody Map<String, Object> getAroundMountains(@RequestParam("city") String city, @RequestParam("pageNo") int pageNo) {
         try {
-            return ResponseUtil.success(mountainServiceImpl.getAroundMountains(city));
+            return ResponseUtil.success(mountainServiceImpl.getAroundMountains(city, pageNo));
         } catch (Exception e) {
             return ResponseUtil.exceptionError(CustomError.NO_AROUND_MOUNTAINS.code, CustomError.NO_AROUND_MOUNTAINS.message);
         }
