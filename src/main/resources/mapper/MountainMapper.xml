@@ -42,6 +42,11 @@
         and mImageUrl is not null limit #{size}, 10
     </select>
 
+    <select id="getDifficultMountains" parameterType="Integer" resultMap="mountain">
+        select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where mheight > 700
+        and mImageUrl is not null limit #{size}, 10
+    </select>
+
     <select id="getMountainCode" parameterType="String" resultType="String">
         select mcode from mountains where mname = #{name}
     </select>
@@ -49,4 +54,25 @@
     <select id="getCity" parameterType="String" resultType="String">
         select maddress from mountains where mname = #{name}
     </select>
+
+    <select id="getMountainsWithBaby" parameterType="Integer" resultMap="mountain">
+        select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where mheight between 1 and 150
+        and mImageUrl is not null limit #{size}, 10
+    </select>
+
+    <select id="getAutumnMountains" parameterType="Integer" resultMap="mountain">
+        select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where mdetail like '%가을%'
+        and mImageUrl is not null limit #{size}, 10
+    </select>
+
+    <select id="getPopularMountains" parameterType="Integer" resultMap="mountain">
+        select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where mdetail like '%인기%'
+        and mImageUrl is not null limit #{size}, 10
+    </select>
+
+    <select id="getVallyMountains" parameterType="Integer" resultMap="mountain">
+        select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where mdetail like '%계곡%'
+        and mImageUrl is not null limit #{size}, 10
+    </select>
+
 </mapper>

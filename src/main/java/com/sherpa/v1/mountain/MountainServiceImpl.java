@@ -86,4 +86,45 @@ public class MountainServiceImpl implements MountainService {
         }
         return mountainMapper.getCity(name);
     }
+
+    public List<MountainDTO> getDifficultMountains(int pageNo) throws Exception {
+        if (pageNo == 0) {
+            throw CustomError.PAGE_UPPER_THAN_ZERO.exception();
+        }
+        int size = (pageNo - 1) * 10;
+        return mountainMapper.getDifficultMountains(size);
+    }
+
+    public List<MountainDTO> getMountainsWithBaby(int pageNo) throws Exception {
+        if (pageNo == 0) {
+            throw CustomError.PAGE_UPPER_THAN_ZERO.exception();
+        }
+        int size = (pageNo - 1) * 10;
+        return mountainMapper.getMountainsWithBaby(size);
+    }
+
+    public List<MountainDTO> getAutumnMountains(int pageNo) throws Exception {
+        if (pageNo == 0) {
+            throw CustomError.PAGE_UPPER_THAN_ZERO.exception();
+        }
+        int size = (pageNo - 1) * 10;
+        return mountainMapper.getAutumnMountains(size);
+    }
+
+    public List<MountainDTO> getPopularMountains(int pageNo) throws Exception {
+        if (pageNo == 0) {
+            throw CustomError.PAGE_UPPER_THAN_ZERO.exception();
+        }
+        int size = (pageNo - 1) * 10;
+        return mountainMapper.getPopularMountains(size);
+    }
+
+    @Override
+    public List<MountainDTO> getVallyMountains(int pageNo) throws Exception {
+        if (pageNo == 0) {
+            throw CustomError.PAGE_UPPER_THAN_ZERO.exception();
+        }
+        int size = (pageNo - 1) * 10;
+        return mountainMapper.getVallyMountains(size);
+    }
 }

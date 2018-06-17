@@ -17,4 +17,9 @@ public interface MountainService {
     List<MountainDTO> getEasyMountains(int size) throws Exception;
     String getMountainCode(String name) throws Exception;
     String getCity(String name) throws Exception;
+    List<MountainDTO> getDifficultMountains(int size) throws Exception;
+    List<MountainDTO> getMountainsWithBaby(int size) throws Exception;
+    List<MountainDTO> getAutumnMountains(int size) throws Exception;
+    List<MountainDTO> getPopularMountains(int pageNo) throws Exception;
+    List<MountainDTO> getVallyMountains(int pageNo) throws Exception;
 }

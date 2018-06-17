@@ -19,4 +19,9 @@ public interface MountainMapper {
     List<MountainDTO> getEasyMountains(int pageNo);
     String getMountainCode(String name);
     String getCity(String name);
+    List<MountainDTO> getDifficultMountains(int pageNo);
+    List<MountainDTO> getMountainsWithBaby(int size);
+    List<MountainDTO> getAutumnMountains(int size);
+    List<MountainDTO> getPopularMountains(int pageNo);
+    List<MountainDTO> getVallyMountains(int pageNo);
 }
