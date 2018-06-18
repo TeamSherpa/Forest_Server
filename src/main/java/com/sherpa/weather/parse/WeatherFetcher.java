@@ -12,7 +12,7 @@ public class WeatherFetcher {
 
     public static WeatherFetcher shared = new WeatherFetcher();
 
-    public WeatherFetcher() {
+    private WeatherFetcher() {
 
     }
 
