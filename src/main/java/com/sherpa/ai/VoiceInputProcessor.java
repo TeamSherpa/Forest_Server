@@ -59,7 +59,7 @@ public class VoiceInputProcessor {
             case NEWS:
                 result.put("response", newsService.getNews(input));
                 return ResponseUtil.success(result);
-            case WHETHER:
+            case WEATHER:
                 break;
             case EDUCATION:
                 result.put("response", mountainService.getEducationInfo(1));
