@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 
 @RestController
@@ -54,6 +56,10 @@ public class WeatherController {
     @RequestMapping(value = "/getThreeDaysUVIndex", method = RequestMethod.GET)
     public @ResponseBody Map<String, Object> getThreeDaysUVIndex(@RequestParam("latitude") String latitude, @RequestParam("longitude") String longitude) {
         try {
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("hh");
+            if(Integer.parseInt(simpleDateFormat.format(new Date())) > 6){
+                throw new RuntimeException("18시 이후 조회시 당일 자외선 지수 정보 없음.");
+            }
             return ResponseUtil.success(weatherServiceImpl.getThreeDaysUVIndex(latitude, longitude));
         } catch (Exception e) {
             return ResponseUtil.exceptionError(CustomError.NO_UV_INDEX_ERROR.code, CustomError.NO_UV_INDEX_ERROR.message);

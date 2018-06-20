@@ -26,9 +26,6 @@ public class WeatherServiceImpl implements WeatherService {
     @Override
     public YesterdayWeatherDTO getYesterdayWeather(Address address) throws UnsupportedEncodingException {
         YesterdayWeatherDTO yesterdayWeatherDTO = WeatherFetcher.shared.fetchYesterdayWeather(address);
-        ThreeDaysUVIndexDTO threeDaysUVIndexDTO = WeatherFetcher.shared.fetchThreeDaysUVIndex(yesterdayWeatherDTO.getLatitude(), yesterdayWeatherDTO.getLongitude());
-        yesterdayWeatherDTO.setUvIndex(threeDaysUVIndexDTO.getToday().getIndex());
-        yesterdayWeatherDTO.setUvComment(threeDaysUVIndexDTO.getToday().getComment());
         return yesterdayWeatherDTO;
     }
 
