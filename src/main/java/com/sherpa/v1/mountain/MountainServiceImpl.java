@@ -5,7 +5,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.sherpa.exception.CustomError;
 import com.sherpa.mapper.MountainMapper;
-import com.sherpa.mountain.parse.MountainInfomationParse;
+import com.sherpa.mountain.parse.MountainInformationParse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -56,7 +56,7 @@ public class MountainServiceImpl implements MountainService {
         if (pageNo == 0) {
             throw CustomError.PAGE_UPPER_THAN_ZERO.exception();
         }
-        return MountainInfomationParse.shared.fetchEducationInfo(pageNo);
+        return MountainInformationParse.shared.fetchEducationInfo(pageNo);
     }
 
     @Override

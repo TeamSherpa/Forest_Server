@@ -8,7 +8,8 @@ public enum Category {
     NEWS,
     MOUNTAIN,
     EDUCATION,
-    WHETHER;
+    TRAIL,
+    WEATHER;
 
 
     public static Category getCategory(List<String> phrases) {
@@ -17,7 +18,9 @@ public enum Category {
         } else if (phrases.contains("교육") || phrases.contains("프로그램")) {
             return Category.EDUCATION;
         } else if (phrases.contains("날씨") || phrases.contains("기상")) {
-            return Category.WHETHER;
+            return Category.WEATHER;
+        } else if (phrases.contains("등산로")) {
+            return Category.TRAIL;
         } else {
             for (String phrase: phrases) {
                 if (phrase.contains("산")) {

@@ -8,11 +8,11 @@ import com.sherpa.v1.mountain.ForestEducationDTO;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MountainInfomationParse {
+public class MountainInformationParse {
 
-    public static MountainInfomationParse shared = new MountainInfomationParse();
+    public static MountainInformationParse shared = new MountainInformationParse();
 
-    private MountainInfomationParse() {
+    private MountainInformationParse() {
 
     }
 

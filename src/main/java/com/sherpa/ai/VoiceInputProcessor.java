@@ -59,13 +59,17 @@ public class VoiceInputProcessor {
             case NEWS:
                 result.put("response", newsService.getNews(input));
                 return ResponseUtil.success(result);
-            case WHETHER:
+            case WEATHER:
                 break;
             case EDUCATION:
                 result.put("response", mountainService.getEducationInfo(1));
                 return ResponseUtil.success(result);
             case MOUNTAIN:
                 result.put("response", subdivideMountainCategory(mountainService));
+                return ResponseUtil.success(result);
+            case TRAIL:
+                String code = mountainService.getMountainCode(mountainName);
+                result.put("response", mountainService.getTrailInfo(code));
                 return ResponseUtil.success(result);
             case NONE:
                 break;
@@ -78,8 +82,7 @@ public class VoiceInputProcessor {
             if (pharse.contains("쉬운") || pharse.contains("편한") || pharse.contains("낮은")) {
                 return service.getEasyMountains(1);
             } else if (pharse.contains("등산로")) {
-                String code = service.getMountainCode(mountainName);
-                return service.getTrailInfo(code);
+
             } else if (pharse.contains("유명") || pharse.contains("명산") || pharse.contains("유명한")) {
                 return service.getFamousMountains(1);
             } else if (pharse.contains("가을") || pharse.contains("단풍")) {
