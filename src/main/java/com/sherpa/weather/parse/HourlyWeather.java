@@ -21,7 +21,7 @@ public class HourlyWeather {
         return new HourlyWeatherDTO(wind.get("wspd"), precipitation.get("sinceOntime"), getFallenType(precipitation.get("type")),
                 sky.get("name"), temperature.get("tc"), temperature.get("tmax"), temperature.get("tmin"),
                 humidity, lightning, sunRiseTime, sunSetTime, common.get("alertYn"), common.get("stormYn"),
-                grid.get("longitude"), grid.get("latitude"));
+                grid.get("latitude"), grid.get("longitude"));
     }
 
     public String getFallenType(String type){

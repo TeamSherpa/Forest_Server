@@ -15,12 +15,17 @@ public class HourlyWeatherDTO {
     private String lightningYn;
     private String sunRiseTime;
     private String sunSetTime;
+    private String uvIndex;
+    private String uvComment;
     private String alertYn;
     private String stormYn;
-    private String longitude;
+    private String alertSummary;
+    private String alertMessage;
     private String latitude;
+    private String longitude;
 
-    public HourlyWeatherDTO(String windSpeed, String fallenForAnHour, String fallenType, String skyName, String tempNow, String tempMax, String tempMin, String humidity, String lightningYn, String sunRiseTime, String sunSetTime, String alertYn, String stormYn, String longitude, String latitude) {
+
+    public HourlyWeatherDTO(String windSpeed, String fallenForAnHour, String fallenType, String skyName, String tempNow, String tempMax, String tempMin, String humidity, String lightningYn, String sunRiseTime, String sunSetTime, String alertYn, String stormYn, String latitude, String longitude) {
         this.windSpeed = windSpeed;
         this.fallenForAnHour = fallenForAnHour;
         this.fallenType = fallenType;
@@ -34,7 +39,7 @@ public class HourlyWeatherDTO {
         this.sunSetTime = sunSetTime;
         this.alertYn = alertYn;
         this.stormYn = stormYn;
-        this.longitude = longitude;
         this.latitude = latitude;
+        this.longitude = longitude;
     }
 }

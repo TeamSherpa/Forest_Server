@@ -13,8 +13,12 @@ public class YesterdayWeatherDTO {
     private Double tempMin;
     private Double rain;
     private Double snow;
+    private String uvIndex;
+    private String uvComment;
+    private String latitude;
+    private String longitude;
 
-    public YesterdayWeatherDTO(String alertYn, String stormYn, String skyName, Double tempMax, Double tempMin, Double rain, Double snow) {
+    public YesterdayWeatherDTO(String alertYn, String stormYn, String skyName, Double tempMax, Double tempMin, Double rain, Double snow, String latitude, String longitude) {
         this.alertYn = alertYn;
         this.stormYn = stormYn;
         this.skyName = skyName;
@@ -22,5 +26,7 @@ public class YesterdayWeatherDTO {
         this.tempMin = tempMin;
         this.rain = rain;
         this.snow = snow;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 }
