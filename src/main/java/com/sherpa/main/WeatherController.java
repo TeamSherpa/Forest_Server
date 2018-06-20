@@ -5,7 +5,6 @@ import com.sherpa.network.ResponseUtil;
 import com.sherpa.v1.weather.WeatherServiceImpl;
 import com.sherpa.weather.parse.Address;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.CustomAutowireConfigurer;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.UnsupportedEncodingException;

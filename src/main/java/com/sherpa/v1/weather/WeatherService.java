@@ -2,7 +2,6 @@ package com.sherpa.v1.weather;
 
 import com.sherpa.weather.parse.Address;
 import org.springframework.stereotype.Service;
-
 import java.io.UnsupportedEncodingException;
 
 @Service
