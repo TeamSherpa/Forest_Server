@@ -22,7 +22,6 @@ public class WeatherFetcher {
                 + "&county=" + address.getCounty() + "&village=" + address.getVillage()
                 + "&appKey=" + APIConfiguration.sk_AppKey;
         String method = "GET";
-
         NetworkRequestor requestor = new NetworkRequestor(path, method);
         HourlyWeatherDTO hourlyWeatherDTO = null;
         try {
@@ -108,14 +107,13 @@ public class WeatherFetcher {
         try {
             requestor.connect();
             String jsonData = requestor.getOutputStream();
-
             Gson gson = new Gson();
+
             JsonObject jsonObject = new JsonParser().parse(jsonData).getAsJsonObject();
             JsonArray jsonArray = jsonObject.getAsJsonObject("weather")
                     .getAsJsonArray("alert");
             if(jsonArray.size() > 0) {
-                jsonObject = jsonArray.get(0).getAsJsonObject()
-                        .getAsJsonObject("alert60");
+                jsonObject = jsonArray.get(0).getAsJsonObject();
                 SpecialReport specialReport = gson.fromJson(jsonObject, SpecialReport.class);
                 specialReportDTO = specialReport.toSpecialReportDTO();
             }

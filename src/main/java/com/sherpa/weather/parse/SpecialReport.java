@@ -28,7 +28,7 @@ public class SpecialReport {
 
     public String getAlertSummary(Map<String, String> alert51, String areaName) {
         String alertSummary = "";
-        alertSummary += areaName + "지역" + alert51.get("varName") + " " + alert51.get("stressName") + " " + alert51.get("cmdName");
+        alertSummary += areaName + " 지역 " + alert51.get("varName") + " " + alert51.get("stressName") + " " + alert51.get("cmdName");
         return alertSummary;
     }
 }
