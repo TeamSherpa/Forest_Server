@@ -15,7 +15,12 @@ public enum CustomError {
     NO_AROUND_MOUNTAINS(2001, "주변 산 API 에러"),
     VOICE_INPUT_API_ERROR(2001, "음성 인식 API 에러"),
     PAGE_UPPER_THAN_ZERO(2002, "페이지는 1부터 시작해야합니다."),
-    CANNOT_PROCESSING_VOICE_INPUT(2003, "음성 처리를 할 수 없습니다.");
+    CANNOT_PROCESSING_VOICE_INPUT(2003, "음성 처리를 할 수 없습니다."),
+    NO_HOURLY_WEATHER(2001, "시간별 날씨 OPEN API 에러"),
+    URL_ENCODING_ERROR(2004, "URL 인코딩 에러"),
+    NO_YESTERDAY_WEATHER(2001, "어제 날씨 OPEN API 에러"),
+    NO_WEATHER_SPECIAL_REPORT(2001, "기상특보 OPEN API 에러"),
+    NO_UV_INDEX_ERROR(2001, "자외선 지수 OPEN API 에러");
 
     public int code;
     public String message;
