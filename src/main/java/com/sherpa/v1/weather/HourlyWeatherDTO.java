@@ -7,7 +7,7 @@ public class HourlyWeatherDTO {
     private String windSpeed;
     private String fallenForAnHour;
     private String fallenType;
-    private String skyName;
+    private String skyCode;
     private String tempNow;
     private String tempMax;
     private String tempMin;
@@ -25,11 +25,11 @@ public class HourlyWeatherDTO {
     private String longitude;
 
 
-    public HourlyWeatherDTO(String windSpeed, String fallenForAnHour, String fallenType, String skyName, String tempNow, String tempMax, String tempMin, String humidity, String lightningYn, String sunRiseTime, String sunSetTime, String alertYn, String stormYn, String latitude, String longitude) {
+    public HourlyWeatherDTO(String windSpeed, String fallenForAnHour, String fallenType, String skyCode, String tempNow, String tempMax, String tempMin, String humidity, String lightningYn, String sunRiseTime, String sunSetTime, String alertYn, String stormYn, String latitude, String longitude) {
         this.windSpeed = windSpeed;
         this.fallenForAnHour = fallenForAnHour;
         this.fallenType = fallenType;
-        this.skyName = skyName;
+        this.skyCode = skyCode;
         this.tempNow = tempNow;
         this.tempMax = tempMax;
         this.tempMin = tempMin;

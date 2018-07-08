@@ -12,10 +12,10 @@ public class YesterdayWeather {
     Map<String, String> precipitation;
 
     public YesterdayWeatherDTO toYesterdayWeatherDTO() {
-        return new YesterdayWeatherDTO(common.get("alertYn"), common.get("stormYn"), sky.get("name"),
-                Double.parseDouble(temperature.get("tmax")),
-                Double.parseDouble(temperature.get("tmin")),
-                Double.parseDouble(precipitation.get("rain")),
-                Double.parseDouble(precipitation.get("snow")));
+        return new YesterdayWeatherDTO(common.get("alertYn"), common.get("stormYn"), sky.get("code"),
+                temperature.get("tmax"),
+                temperature.get("tmin"),
+                precipitation.get("rain"),
+                precipitation.get("snow"));
     }
 }
