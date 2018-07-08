@@ -19,7 +19,7 @@ public class HourlyWeather {
 
     public HourlyWeatherDTO toHourlyWeatherDTO(){
         return new HourlyWeatherDTO(wind.get("wspd"), precipitation.get("sinceOntime"), getFallenType(precipitation.get("type")),
-                sky.get("name"), temperature.get("tc"), temperature.get("tmax"), temperature.get("tmin"),
+                sky.get("code"), temperature.get("tc"), temperature.get("tmax"), temperature.get("tmin"),
                 humidity, lightning, sunRiseTime, sunSetTime, common.get("alertYn"), common.get("stormYn"),
                 grid.get("latitude"), grid.get("longitude"));
     }
