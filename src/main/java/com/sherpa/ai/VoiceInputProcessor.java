@@ -71,6 +71,10 @@ public class VoiceInputProcessor {
                 String code = mountainService.getMountainCode(mountainName);
                 result.put("response", mountainService.getTrailInfo(code));
                 return ResponseUtil.success(result);
+            case TRAFFIC:
+                String mountainCode = mountainService.getMountainCode(mountainName);
+                result.put("response", mountainService.getMountainPosition(mountainCode));
+                return ResponseUtil.success(result);
             case NONE:
                 break;
         }

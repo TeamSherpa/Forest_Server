@@ -15,6 +15,12 @@
         <result property="isFamous" column="is_Famous" javaType="java.lang.Integer"/>
     </resultMap>
 
+    <resultMap id="position" type="com.sherpa.v1.mountain.MountainPositionDTO">
+        <result property="code" column="mcode" javaType="java.lang.String"/>
+        <result property="latitude" column="latitude" javaType="java.lang.String"/>
+        <result property="longitude" column="longitude" javaType="java.lang.String"/>
+    </resultMap>
+
     <insert id="add" parameterType="com.sherpa.v1.mountain.MountainDTO">
       insert ignore into mountains
       values(null, #{code},#{name},#{height},#{address},#{management},#{detail},#{summary},#{imageURL},#{isFamous})
@@ -73,6 +79,10 @@
     <select id="getVallyMountains" parameterType="Integer" resultMap="mountain">
         select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where mdetail like '%계곡%' and mImageUrl is not null
         and mImageUrl is not null limit #{size}, 10
+    </select>
+
+    <select id="getMountainPosition" parameterType="String" resultMap="position">
+        select mcode, latitude, longitude from mountainlocation where mcode = #{code}
     </select>
 
 </mapper>

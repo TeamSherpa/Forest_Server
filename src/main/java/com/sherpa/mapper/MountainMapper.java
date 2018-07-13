@@ -3,6 +3,7 @@ package com.sherpa.mapper;
 import com.sherpa.v1.mountain.FamousMountainDTO;
 import com.sherpa.v1.mountain.MountainDTO;
 import com.sherpa.v1.mountain.MountainImageDTO;
+import com.sherpa.v1.mountain.MountainPositionDTO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -25,4 +26,5 @@ public interface MountainMapper {
     List<MountainDTO> getAutumnMountains(int size);
     List<MountainDTO> getPopularMountains(int pageNo);
     List<MountainDTO> getVallyMountains(int pageNo);
+    List<MountainPositionDTO> getMountainPosition(String code);
 }

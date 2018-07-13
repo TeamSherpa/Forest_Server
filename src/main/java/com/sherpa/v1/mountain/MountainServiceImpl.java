@@ -131,4 +131,9 @@ public class MountainServiceImpl implements MountainService {
         int size = (pageNo - 1) * 10;
         return mountainMapper.getVallyMountains(size);
     }
+
+    @Override
+    public List<MountainPositionDTO> getMountainPosition(String code) {
+        return mountainMapper.getMountainPosition(code);
+    }
 }

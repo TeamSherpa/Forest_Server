@@ -9,6 +9,7 @@ public enum Category {
     MOUNTAIN,
     EDUCATION,
     TRAIL,
+    TRAFFIC,
     WEATHER;
 
 
@@ -21,6 +22,8 @@ public enum Category {
             return Category.WEATHER;
         } else if (phrases.contains("등산로")) {
             return Category.TRAIL;
+        } else if (phrases.contains("교통") || phrases.contains("경로")) {
+            return Category.TRAFFIC;
         } else {
             for (String phrase: phrases) {
                 if (phrase.contains("산")) {
