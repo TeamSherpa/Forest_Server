@@ -7,6 +7,7 @@ import com.google.gson.JsonParser;
 import com.sherpa.exception.CustomError;
 import com.sherpa.network.NetworkRequestor;
 import com.sherpa.network.ResponseUtil;
+import com.sherpa.v1.local.LocalServiceImpl;
 import com.sherpa.v1.mountain.MountainDTO;
 import com.sherpa.v1.mountain.MountainServiceImpl;
 import com.sherpa.v1.news.NewsServiceImpl;
@@ -51,7 +52,7 @@ public class VoiceInputProcessor {
         }
     }
 
-    public Map<String, Object> process(NewsServiceImpl newsService, MountainServiceImpl mountainService) throws Exception {
+    public Map<String, Object> process(NewsServiceImpl newsService, MountainServiceImpl mountainService, LocalServiceImpl localService) throws Exception {
         Category category = Category.getCategory(phrasePool);
         Map<String, Object> result = new HashMap<>();
         result.put("Category", category);
@@ -74,6 +75,10 @@ public class VoiceInputProcessor {
             case TRAFFIC:
                 String mountainCode = mountainService.getMountainCode(mountainName);
                 result.put("response", mountainService.getMountainPosition(mountainCode));
+                return ResponseUtil.success(result);
+            case LOCAL:
+                String searchText = mountainName + "맛집";
+                result.put("response", localService.getLocal(searchText));
                 return ResponseUtil.success(result);
             case NONE:
                 break;

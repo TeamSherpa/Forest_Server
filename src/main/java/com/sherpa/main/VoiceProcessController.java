@@ -3,6 +3,7 @@ package com.sherpa.main;
 import com.sherpa.ai.VoiceInputProcessor;
 import com.sherpa.exception.CustomError;
 import com.sherpa.network.ResponseUtil;
+import com.sherpa.v1.local.LocalServiceImpl;
 import com.sherpa.v1.mountain.MountainServiceImpl;
 import com.sherpa.v1.news.NewsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +20,15 @@ public class VoiceProcessController {
     @Autowired
     private MountainServiceImpl mountainServiceImpl;
 
+    @Autowired
+    private LocalServiceImpl localServiceImpl;
+
     @RequestMapping(value = "/sendVoice", method = RequestMethod.GET)
     public @ResponseBody
     Map<String, Object> process(@RequestParam("input") String input) {
         try {
             VoiceInputProcessor processor = new VoiceInputProcessor(input);
-            return processor.process(newsServiceImpl, mountainServiceImpl);
+            return processor.process(newsServiceImpl, mountainServiceImpl, localServiceImpl);
         } catch (Exception e) {
             return ResponseUtil.exceptionError(CustomError.VOICE_INPUT_API_ERROR.code, CustomError.VOICE_INPUT_API_ERROR.message);
         }
