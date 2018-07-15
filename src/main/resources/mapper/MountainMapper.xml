@@ -85,4 +85,8 @@
         select mcode, latitude, longitude from mountainlocation where mcode = #{code}
     </select>
 
+    <select id="getMountainInfo" parameterType="String" resultMap="mountain">
+        select mcode, mname, mheight, maddress, mmanagement, mdetail, msummary, mImageUrl, is_Famous from mountains where mname = #{name}
+    </select>
+
 </mapper>

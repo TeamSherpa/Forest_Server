@@ -27,4 +27,5 @@ public interface MountainMapper {
     List<MountainDTO> getPopularMountains(int pageNo);
     List<MountainDTO> getVallyMountains(int pageNo);
     List<MountainPositionDTO> getMountainPosition(String code);
+    MountainDTO getMountainInfo(String name);
 }

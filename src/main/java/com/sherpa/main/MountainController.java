@@ -141,4 +141,13 @@ public class MountainController {
             return ResponseUtil.exceptionError(CustomError.NO_VALLY_MOUNTAINS.code, CustomError.NO_VALLY_MOUNTAINS.message);
         }
     }
+
+    @RequestMapping(value = "/getMountainInfo", method = RequestMethod.GET)
+    public @ResponseBody Map<String, Object> getMountainInfo(@RequestParam("mountainName") String mountainName) {
+        try {
+            return ResponseUtil.success(mountainServiceImpl.getMountainInfo(mountainName));
+        } catch (Exception e) {
+            return ResponseUtil.exceptionError(CustomError.NO_MOUNTAIN_IN_DB.code, CustomError.NO_MOUNTAIN_IN_DB.message);
+        }
+    }
 }

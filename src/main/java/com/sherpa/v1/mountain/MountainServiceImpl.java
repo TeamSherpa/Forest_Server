@@ -136,4 +136,9 @@ public class MountainServiceImpl implements MountainService {
     public List<MountainPositionDTO> getMountainPosition(String code) {
         return mountainMapper.getMountainPosition(code);
     }
+
+    @Override
+    public MountainDTO getMountainInfo(String name) throws Exception {
+        return mountainMapper.getMountainInfo(name);
+    }
 }

@@ -20,7 +20,8 @@ public enum CustomError {
     URL_ENCODING_ERROR(2004, "URL 인코딩 에러"),
     NO_YESTERDAY_WEATHER(2001, "어제 날씨 OPEN API 에러"),
     NO_WEATHER_SPECIAL_REPORT(2001, "기상특보 OPEN API 에러"),
-    NO_UV_INDEX_ERROR(2001, "자외선 지수 OPEN API 에러");
+    NO_UV_INDEX_ERROR(2001, "자외선 지수 OPEN API 에러"),
+    NO_MOUNTAIN_IN_DB(2005, "해당 산이 DB에 없음");
 
     public int code;
     public String message;
