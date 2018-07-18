@@ -80,6 +80,9 @@ public class VoiceInputProcessor {
                 String searchText = mountainName + "맛집";
                 result.put("response", localService.getLocal(searchText));
                 return ResponseUtil.success(result);
+            case INFO:
+                result.put("response", mountainService.getMountainInfo(mountainName));
+                return ResponseUtil.success(result);
             case NONE:
                 break;
         }

@@ -11,7 +11,8 @@ public enum Category {
     TRAIL,
     TRAFFIC,
     LOCAL,
-    WEATHER;
+    WEATHER,
+    INFO;
 
 
     public static Category getCategory(List<String> phrases) {
@@ -27,6 +28,8 @@ public enum Category {
             return Category.TRAFFIC;
         } else if (phrases.contains("맛집") || phrases.contains("음식점")) {
             return Category.LOCAL;
+        } else if (phrases.contains("정보")) {
+            return Category.INFO;
         } else {
             for (String phrase: phrases) {
                 if (phrase.contains("산")) {
