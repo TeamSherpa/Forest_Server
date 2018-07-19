@@ -87,7 +87,7 @@ public class VoiceInputProcessor {
                 Map<String, Object> distanceMap = new HashMap<>();
                 distanceMap.put("distance", "2.4");
                 result.put("response", distanceMap);
-                return ResponseUtil.success(distanceMap);
+                return ResponseUtil.success(result);
             case NONE:
                 break;
         }
