@@ -12,6 +12,7 @@ public enum Category {
     TRAFFIC,
     LOCAL,
     WEATHER,
+    DISTANCE,
     INFO;
 
 
@@ -30,6 +31,8 @@ public enum Category {
             return Category.LOCAL;
         } else if (phrases.contains("정보")) {
             return Category.INFO;
+        } else if (phrases.contains("정상") || phrases.contains("거리")) {
+            return Category.DISTANCE;
         } else {
             for (String phrase: phrases) {
                 if (phrase.contains("산")) {

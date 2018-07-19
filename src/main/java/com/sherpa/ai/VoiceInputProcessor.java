@@ -83,6 +83,11 @@ public class VoiceInputProcessor {
             case INFO:
                 result.put("response", mountainService.getMountainInfo(mountainName));
                 return ResponseUtil.success(result);
+            case DISTANCE:
+                Map<String, Object> distanceMap = new HashMap<>();
+                distanceMap.put("distance", "2.4");
+                result.put("response", distanceMap);
+                return ResponseUtil.success(distanceMap);
             case NONE:
                 break;
         }
