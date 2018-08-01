@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class VoiceInputProcessor {
 
-    String openSourceUrl = "https://open-korean-text.herokuapp.com/extractPhrases?text=";
+    String openSourceUrl = "https://open-korean-text-api.herokuapp.com/extractPhrases?text=";
     String method = "GET";
     NetworkRequestor networkRequestor;
     List<String> phrasePool = new ArrayList<>();
